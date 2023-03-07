@@ -4,6 +4,7 @@ def encode():
 
 
 def main():
+    print()
     pass
 
 
