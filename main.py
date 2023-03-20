@@ -2,15 +2,14 @@ def encode(password):
     password_list = list(password)
     new_password = ''
     for value in password_list:
-        value += 3
-        new_password += value
+        value = int(value) + 3
+        new_password += str(value)
 
     return new_password
 
 
 def main():
     running = True
-    newVar = 123
     encoded_password = ''
     password = ''
     while running:
@@ -24,10 +23,11 @@ def main():
         if user_selection == 1:
             password = input('Please enter your password to encode: ')
             encoded_password = encode(password)
-        if user_selection == 2:
+            print("Your password has been encoded and stored!")
+        elif user_selection == 2:
             print(f'The encoded password is {encoded_password}, and the original password is {password}.')
-
-
+        else:
+            break
 
 
 if __name__ == '__main__':
