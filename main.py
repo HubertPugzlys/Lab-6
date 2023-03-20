@@ -10,6 +10,7 @@ def encode(password):
 
 def main():
     running = True
+    newVar = 123
     encoded_password = ''
     password = ''
     while running:
