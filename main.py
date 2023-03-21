@@ -1,3 +1,5 @@
+# Hubert Pugzlys
+
 def encode(password):
     password_list = list(password)
     new_password = ''
