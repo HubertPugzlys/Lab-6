@@ -6,6 +6,13 @@ def encode(password):
         new_password += str(value)
 
     return new_password
+def decode(new_password):
+    password_list = list(new_password)
+    original_password = ''
+    for value in new_password:
+        value = int(value) - 3
+        original_password += str(value)
+    return original_password
 
 
 def main():
@@ -25,7 +32,7 @@ def main():
             encoded_password = encode(password)
             print("Your password has been encoded and stored!")
         elif user_selection == 2:
-            print(f'The encoded password is {encoded_password}, and the original password is {password}.\n')
+            print(f'The encoded password is {encoded_password}, and the original password is {decode(encoded_password)}.\n')
         else:
             break
 
